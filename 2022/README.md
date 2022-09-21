@@ -8,3 +8,17 @@ Android App 的程式碼保護主要分為 Java 層及 Native 層兩種，其中
 - SESSION TYPE: 現場演講  
 - LANGUAGE: 中文  
 - SESSION TOPIC: Mobile Security, Reverse Engineering, Secure Coding  
+  
+## 總結  
+如何增加 NDK 程式的逆向難度
+- 將函數宣告為 static 類型，避免暴露函數名稱  
+- [JNI 函數使用 RegisterNatives 進行動態註冊](https://developer.android.com/training/articles/perf-jni#native-libraries)  
+- [所有字串使用字串加密巨集進行加密](https://github.com/adamyaxley/Obfuscate)  
+- [敏感函數自行實作，不呼叫系統函示庫的敏感函數](https://github.com/darvincisec/DetectFrida/tree/master/app/src/main/c)  
+- [所有程式碼使用 O-LLVM 進行混淆](https://github.com/darvincisec/o-llvm-binary)  
+
+## 相關工具檔案
+[OWASP - MSTG Crackmes](https://github.com/OWASP/owasp-mastg/tree/master/Crackmes)  
+[Unicorn Engine](https://github.com/unicorn-engine/unicorn)  
+[unidbg](https://github.com/zhkl0228/unidbg)  
+[AndroidNativeEmu](https://github.com/AeonLucid/AndroidNativeEmu)  
